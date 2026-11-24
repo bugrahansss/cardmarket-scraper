@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardmarket-scraper"
+version = "0.1.0"
+description = "Scrape Cardmarket with Python: every card in a set with its lowest price, plus each card's price guide (trend, 30/7/1-day averages), 30-day price history and offers by condition, language and seller country."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Buğrahan Saka" }]
+keywords = ["cardmarket", "mtg", "magic the gathering", "pokemon tcg", "yugioh", "card prices", "trading cards", "price tracker", "web scraping", "scraper", "scrapedo"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Games/Entertainment",
+]
+dependencies = ["requests>=2.25"]
+
+[project.urls]
+Homepage = "https://github.com/bugrahansss/cardmarket-scraper"
+Source = "https://github.com/bugrahansss/cardmarket-scraper"
+Issues = "https://github.com/bugrahansss/cardmarket-scraper/issues"
+
+[project.scripts]
+cardmarket-scraper = "cardmarket_scraper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
